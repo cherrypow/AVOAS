@@ -14,18 +14,36 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: consolas, sans-serif; /* Use a font that fits well with long text */
+            font-family: Arial, sans-serif; /* Use a font that fits well with long text */
         }
         .content {
             text-align: left; /* Align text to the left */
             padding: 20px;
             max-width: 80%; /* Ensure it doesn't stretch too wide */
             max-height: 90vh; /* Adjust height so it doesn't overflow */
-            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-y: scroll; /* Enable vertical scrolling */
             word-wrap: break-word; /* Prevent words from overflowing */
             line-height: 1.6; /* Adjust line height for readability */
             white-space: pre-wrap; /* Maintain spaces and line breaks */
             margin: 0 20px; /* Add strict horizontal margins */
+            
+            /* Hide scrollbar */
+            scrollbar-width: thin;
+            scrollbar-color: transparent transparent;
+        }
+        
+        /* For Webkit browsers (Chrome, Safari, etc.) */
+        .content::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        .content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .content::-webkit-scrollbar-thumb {
+            background: transparent;
         }
     </style>
 </head>
@@ -43,6 +61,5 @@ Yes. But you never saw the way I went crawling through intactile places with sha
 
 
 
-    </div>
 </body>
 </html>
